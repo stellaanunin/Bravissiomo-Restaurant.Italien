@@ -143,3 +143,51 @@ section-message {
     font-size: 2em;
     color: #006937;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .logo-header {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto 10px;
+        height: 45px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .section-message {
+        font-size: 1.5em;
+    }
+}
