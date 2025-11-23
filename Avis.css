@@ -122,3 +122,40 @@ main h1 {
 .bloc-formulaire button:hover {
     background-color: #e50914;
 }
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    header {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .logo-header {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto 10px;
+        height: 45px;
+    }
+
+    main, .bloc-formulaire {
+        margin: 20px;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    main h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a, .bloc-formulaire button {
+        font-size: 14-15px;
+    }
+}
