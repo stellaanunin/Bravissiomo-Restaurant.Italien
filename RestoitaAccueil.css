@@ -229,9 +229,8 @@ footer {
 } 
 
 @media (max-width: 768px) {
-    nav ul {
+    header {
         flex-direction: column;
-        gap: 10px;
         align-items: center;
     }
 
@@ -245,10 +244,18 @@ footer {
         height: 45px;
     }
 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
     .hero {
         height: auto;
         padding: 60px 15px;
-        background-attachment: scroll; 
+        background-attachment: scroll; /* evita problemi su mobile */
     }
 
     .header-text h1 em {
@@ -268,9 +275,25 @@ footer {
         margin-top: 10px;
     }
 
-    .menu-button, .RDV-button, .Apropos-button {
+    .menu-button,
+    .RDV-button,
+    .Apropos-button {
         width: 100%;
         font-size: 16px;
         padding: 10px 15px;
+    }
+    
+    .hero {
+        height: 300px;             
+        padding: 0 15px;           
+        background-position: top;  
+    }
+
+    .hero h1 {
+        font-size: 24px;           
+    }
+
+    .hero h2 {
+        font-size: 16px;           
     }
 }
