@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<title>Avis - Bravissimo</title>
+    <link href="Avis.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+     <header>
+	     <img src="Logo-Bravissimo.png" alt="Logo Bravissimo" class="logo-header" />
+
+        <nav>
+            <ul>
+                <li><a href="Bravissimo-Accueil.html">Accueil</a></li>
+                <li><a href="Apropos-Bravissimo.html">À propos</a></li>
+                <li><a href="Bravissimo-RDV.html">Réservation en ligne</a></li>
+				<li><a href="Bravissimo-Avis.html">Avis</a></li>
+            </ul>
+        </nav>
+    </header>
+	<section class="bloc bloc-formulaire">
+    <h2>Laissez votre avis :</h2>
+    <form id="formAvis" onsubmit="return envoyerAvis();">
+        <label for="nom">Nom* :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email* :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="note">Note :</label>
+        <select id="note" name="note">
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="commentaire">Commentaire* :</label>
+        <textarea id="commentaire" name="commentaire" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+        <button type="reset">Réinitialiser</button>
+    </form>
+</section>
+
+	<footer>
+    <p>&copy; 2025 Bravissimo! Tous droits réservés.</p>
+	</footer>
+	
+<script>
+function envoyerAvis() {
+    alert("Merci pour votre avis !"); 
+    return false; // empêche l'envoi réel pour test
+}
+</script>
+</body>
+</html>

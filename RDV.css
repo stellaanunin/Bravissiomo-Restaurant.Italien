@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff9e8;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+}
+
+header {
+    background-color: #006937;
+    height: 70px;
+    display: flex;
+    align-items: center;        
+    justify-content: center;    
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;          
+}
+
+.logo-header {
+    position: absolute;
+    left: 20px;                  
+    top: 50%;
+    transform: translateY(-50%);
+    height: 55px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;                   
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #e50914;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #006937;
+}
+
+section {
+    background-color: #f7f7f0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #006937;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+fieldset {
+    border: 1px solid #006937;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #006937;
+}
+
+button {
+    background-color: #006937;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e50914;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #006937;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+section-message {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #006937;
+}

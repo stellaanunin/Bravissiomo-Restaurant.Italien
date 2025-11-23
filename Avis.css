@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff9e8;
+    color: #333;
+}
+
+body {
+    background-color: #fff9e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+}
+
+header {
+    background-color: #006937;
+    height: 70px;
+    display: flex;
+    align-items: center;        
+    justify-content: center;    
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;          
+}
+
+.logo-header {
+    position: absolute;
+    left: 20px;                  
+    top: 50%;
+    transform: translateY(-50%);
+    height: 55px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;                   
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #e50914;
+    text-decoration: underline;
+}
+
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #006937;
+}
+.bloc-formulaire {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: #fffdf5;
+    border-left: 6px solid #e50914;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.bloc-formulaire h2 {
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bloc-formulaire label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.bloc-formulaire input,
+.bloc-formulaire select,
+.bloc-formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.bloc-formulaire button {
+    background-color: #006937;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bloc-formulaire button:hover {
+    background-color: #e50914;
+}

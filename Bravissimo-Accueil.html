@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Bravissimo</title>
+    <link href="RestoitaAccueil.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <img src="Logo-Bravissimo.png" alt="Logo Bravissimo" class="logo-header" />
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Bravissimo-Accueil.html" class="active">Accueil</a></li>
+                <li><a href="Apropos-Bravissimo.html">À propos</a></li>
+                <li><a href="Bravissimo-RDV.html">Réservation</a></li>
+                <li><a href="Bravissimo-Avis.html">Avis</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero fade-in">
+        <div class="header-text">
+            <h1><em>Bravissimo !</em></h1>
+            <h2>Frais. Rapide. Délicieux.</h2>
+            <button class="RDV-button" onclick="window.location.href='Bravissimo-RDV.html'">
+                Réservez votre table
+            </button>
+        </div>
+    </section>
+
+     <section class="welcome fade-in">
+        <h2>Bienvenue chez nous, bienvenue en Italie</h2>
+        <p>Une cuisine authentique, généreuse et préparée avec le meilleur de nos traditions. Chaque plat est une invitation au partage et à la convivialité.</p>
+    </section>
+
+     <section class="menu fade-in">
+        <h2>Au menu ? 18 plats</h2>
+        <p>Conçus avec trente-sept ingrédients soigneusement choisis...</p>
+
+        <div class="menu-cards">
+            <div class="menu-card">
+                <h3>Sfiziosità</h3>
+                <p>Végétarien · Vegan · Viande · Poisson</p>
+            </div>
+            <div class="menu-card">
+                <h3>Pâtes</h3>
+                <p>Végétarien · Vegan · Viande · Poisson</p>
+            </div>
+            <div class="menu-card">
+                <h3>Salades</h3>
+                <p>Végétarien · Vegan · Viande · Poisson</p>
+            </div>
+            <div class="menu-card">
+                <h3>Pizzas</h3>
+                <p>Végétarien · Vegan · Viande · Poisson</p>
+            </div>
+            <div class="menu-card">
+                <h3>Boissons</h3>
+                <p>Chaudes · Froides · Alcoolisées</p>
+            </div>
+        </div>
+
+         <button class="menu-button fixed-cta" onclick="window.location.href='menu.html'">
+            Voir tout le menu
+        </button>
+    </section>
+
+     <section class="fondateur fade-in">
+        <h2>Notre fondateur</h2>
+        <div class="fondateur-container">
+            <img src="founder-bravissimi.jpg" alt="Luca Romano" class="fondateur-photo">
+            <div class="fondateur-description">
+                <p><em>Luca Romano</em>, pizzaiolo napolitain, a grandi dans une pizzeria familiale à Naples et partage aujourd’hui sa passion à Paris. Chaque plat est préparé selon les recettes familiales pour offrir une expérience authentique.</p>
+                <h3><span class="motto">Son Motto :</span></h3>
+                <p><q><em>Chaque assiette raconte une histoire.</em></q></p>
+            </div>
+        </div>
+
+         <button class="Apropos-button fixed-cta" onclick="window.location.href='Apropos-Bravissimo.html'">
+            En savoir plus sur notre équipe
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Bravissimo! Tous droits réservés.</p>
+</footer>
+
+<script>
+     const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+    });
+
+     const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                return;
+            } else {
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>

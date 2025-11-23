@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Bravissimo</title>
+    <link href="RDV.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header>
+    <img src="Logo-Bravissimo.png" alt="Logo Bravissimo" class="logo-header" />
+    <nav>
+        <ul>
+            <li><a href="Bravissimo-Accueil.html">Accueil</a></li>
+            <li><a href="Apropos-Bravissimo.html">À propos</a></li>
+            <li><a href="Bravissimo-RDV.html" class="active">Réservation</a></li>
+            <li><a href="Bravissimo-Avis.html">Avis</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Réservez votre table facilement</h1>
+        <p>Remplissez ce formulaire pour garantir votre place</p>
+    </section>
+
+    <section class="reservation">
+        <form id="formulaire" onsubmit="return validerFormulaire();" novalidate>
+            <fieldset>
+                <legend>Informations personnelles</legend>
+
+                <label>Civilité* :</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="civilite" value="M" required> M</label>
+                    <label><input type="radio" name="civilite" value="Mme"> Mme</label>
+                    <label><input type="radio" name="civilite" value="Mlle"> Mlle</label>
+                </div>
+
+                <label for="nom">Nom* :</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                <label for="prenom">Prénom* :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+
+                <label for="email">Adresse email* :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+
+                <label for="tel">Téléphone* :</label>
+                <input type="tel" id="tel" name="telephone" pattern="[0-9]{10}" placeholder="0123456789" required>
+
+                <label for="daten">Date de réservation :</label>
+                <input type="date" id="daten" name="date_réservation" min="<?= date('Y-m-d'); ?>">
+
+                <label for="nombre">Nombre de personnes* :</label>
+                <input type="number" id="nombre" name="nombre_personnes" min="1" placeholder="1" required>
+            </fieldset>
+
+            <p><strong>* Champs obligatoires</strong></p>
+
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Valider</button>
+                <button type="reset" class="reset-btn">Réinitialiser</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Bravissimo! Tous droits réservés.</p>
+</footer>
+
+<script>
+    function validerFormulaire() {
+        alert("Merci ! Votre réservation a été enregistrée.");
+        window.location.href = "merciRDV.html";
+        return false;
+    }
+</script>
+
+</body>
+</html>
