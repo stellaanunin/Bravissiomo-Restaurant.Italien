@@ -102,31 +102,42 @@ nav ul li a:focus {
 }
 
 @media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo-header {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto 10px;
+        height: 45px;
+    }
+
+    main h2, p {
+        font-size: 1.5em;
+    }
+
+    .menu-title {
+        font-size: 24px;
+    }
+
     .menu-grid {
         grid-template-columns: 1fr;
-}
+        gap: 20px;
+    }
 
-.section-title {
-    font-size: 22px;
-    color: #e50914;
-    border-bottom: 2px solid #006937;
-    display: inline-block;
-    margin-bottom: 10px;
-}
+    .menu-item {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    font-size: 18px;
-    border-bottom: 1px solid #eee;
-}
-
-.menu-item span {
-    color: #333;
-}
-
-.price {
-    font-weight: bold;
-    color: #006937;
+    .menu-item .price {
+        margin-top: 5px;
+    }
 }
