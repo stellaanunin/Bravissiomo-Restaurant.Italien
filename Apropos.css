@@ -227,4 +227,41 @@ section blockquote {
     .bloc {
         padding: 20px 15px;
     }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .logo-header {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto 10px;
+        height: 45px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .bloc-histoire h2,
+    .bloc-équipe h2 {
+        font-size: 1.5em;
+    }
+
+    .grille,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-button {
+        width: 100%;
+        font-size: 16px;
+    }
 }
