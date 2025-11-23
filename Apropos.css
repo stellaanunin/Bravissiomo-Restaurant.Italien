@@ -220,18 +220,11 @@ section blockquote {
 } 
 
 @media (max-width: 768px) {
-    main {
-        padding: 0 15px;
-    }
-
-    .bloc {
-        padding: 20px 15px;
-    }
-
     header {
-        flex-direction: column;
+        flex-direction: column;   
         height: auto;
         padding: 10px 15px;
+        align-items: center;
     }
 
     .logo-header {
@@ -245,23 +238,37 @@ section blockquote {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column;    
         gap: 10px;
         align-items: center;
-    }
-
-    .bloc-histoire h2,
-    .bloc-équipe h2 {
-        font-size: 1.5em;
-    }
-
-    .grille,
-    .team-grid {
-        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
     }
 
     .menu-button {
         width: 100%;
         font-size: 16px;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+
+    .bloc {
+        padding: 20px 15px;
+    }
+
+    .bloc-histoire h2,
+    .bloc-équipe h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .grille,
+    .team-grid {
+        grid-template-columns: 1fr;    
+        gap: 20px;
     }
 }
