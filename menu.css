@@ -61,36 +61,6 @@ nav ul li a:focus {
     text-decoration: underline;
 }
 
-
-
-.hero {
-    position: relative;
-    height: 320px;
-    background-image: url("sfondoAccueil.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);   
-    z-index: 1;
-}
-
-.hero .header-text {
-    position: relative;
-    z-index: 2;
-}
-
 .header-text {
     position: relative;
     z-index: 2;
@@ -107,11 +77,6 @@ nav ul li a:focus {
     margin-top: 10px;
     color: #fdfdfd;  
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);  
-}
-
-.hero h1, 
-.hero h2 {
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
 }
 
 .header-text h1 em {
@@ -254,28 +219,6 @@ footer {
         padding: 0;
     }
 
-    /* HERO CORRETTA SU MOBILE */
-    .hero {
-        height: 320px !important;
-        padding-top: 80px !important;    
-        padding-left: 15px;
-        padding-right: 15px;
-        background-size: cover !important;
-        background-position: center !important;
-        background-attachment: scroll !important;
-    }
-
-    .hero h1 {
-        font-size: 26px !important;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    .hero h2 {
-        font-size: 16px !important;
-        text-align: center;
-    }
-
     section {
         padding: 20px 10px;
     }
@@ -293,3 +236,4 @@ footer {
         padding: 10px 15px;
     }
 }
+
