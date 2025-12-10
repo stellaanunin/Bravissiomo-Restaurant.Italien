@@ -17,6 +17,7 @@ h1, h2, h3, h4 {
 p {
     max-width: 700px;
     margin: 10px auto;
+    line-height: 1.6;
 }
 
 /* HEADER */
@@ -30,26 +31,28 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-wrap: nowrap; /* niente wrap su desktop */
 }
 
 /* LOGO */
 .logo-header {
     height: 55px;
     object-fit: contain;
-    flex-shrink: 0;
     margin-right: 20px;
+    position: static; /* important : pas d'absolu */
+    flex-shrink: 0;
 }
 
 /* NAV */
+nav {
+    display: flex;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap; /* tutti i link su una riga */
-    align-items: center;
 }
 
 nav ul li a {
