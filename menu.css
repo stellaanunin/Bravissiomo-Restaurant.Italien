@@ -1,38 +1,62 @@
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+:root {
+    --primary-color: #006937;
+    --accent-color: #e50914;
+    --background-color: #fff9e8;
+    --card-bg-color: #fff7f0;
+    --text-color: #333;
+    --text-light: #fdfdfd;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #fff9e8;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var;
+    line-height: 1.6;
+    background-color: var;
+    color: var;
 }
 
 h1, h2, h3, h4 {
     margin: 10px 0;
 }
 
-p {
-    max-width: 700px;
-    margin: 10px auto;
-    line-height: 1.6;
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+h4 {
+    font-weight: normal;
+    color: #555;
+    margin-top: 10px;
 }
 
 header {
-    background-color: #006937;
+    background-color: var(--primary-color);
     height: 70px;
     display: flex;
-    align-items: center;        
-    justify-content: center;    
+    align-items: center;
+    justify-content: center;
     padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;          
 }
 
 .logo-header {
     position: absolute;
-    left: 20px;                  
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     height: 55px;
@@ -42,9 +66,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;                   
-    margin: 0;
-    padding: 0;
+    gap: 30px;
 }
 
 nav ul li a {
@@ -57,36 +79,15 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #e50914;
+    color: var;
     text-decoration: underline;
 }
 
-.header-text {
-    position: relative;
-    z-index: 2;
-}
-
-.header-text h1 em {
-    font-size: 55px;
-    color: #e50914;
-}
-
-.header-text h2 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #fdfdfd;  
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);  
-}
-
-.header-text h1 em {
-    color: #ff2a2a;
-}
-
-.RDV-button,
-.menu-button,
+.button, 
+.RDV-button, 
+.menu-button, 
 .Apropos-button {
-    background-color: #006937;
+    background-color: var;
     color: white;
     border: none;
     border-radius: 8px;
@@ -97,12 +98,13 @@ nav ul li a:focus {
     display: block;
 }
 
+.button:hover,
 .RDV-button:hover,
 .menu-button:hover,
 .Apropos-button:hover {
-    background-color: #e50914;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: var;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 section {
@@ -111,130 +113,102 @@ section {
 }
 
 section h2, section h3 {
-    color: #006937;
+    color: var(--primary-color);
 }
 
-section h4 {
-    font-weight: normal;
-    color: #555;
-    margin-top: 10px;
+section p {
+    max-width: 700px;
+    margin: 10px auto;
 }
 
-.menu-cards {
+.menu-container {
+    padding: 20px;
+}
+
+.menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin: 20px 0;
 }
 
-.menu-card {
-    padding: 15px;
+.menu-section {
+    background-color: var;
     border-radius: 10px;
-    background-color: #fff7f0;
-    text-align: center;
+    padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
 
-.menu-card:hover {
+.menu-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0.98;
 }
 
-.menu-button.fixed-cta {
-    margin: 20px auto 0 auto;
-}
-
-.fondateur {
-    padding: 40px 15px;
-    background-color: #f7f7f0;
-    text-align: center;
-}
-
-.fondateur-container {
+.menu-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.fondateur-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #e50914;
-    object-fit: cover;
+.menu-item:last-child {
+    border-bottom: none;
 }
 
-.fondateur-description {
-    max-width: 500px;
-    text-align: left;
-}
-
-.motto {
-    color: #006937;
-    font-weight: bold;
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.Apropos-button.fixed-cta {
-    margin: 20px auto 0 auto;
+.menu-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
 footer { 
-    background-color: #006937; 
+    background-color: var(--primary-color); 
     color: white; 
     text-align: center; 
     padding: 15px 0; 
     font-size: 14px;
 } 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
 
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
+        height: auto;
+        padding: 15px 20px;
     }
 
     .logo-header {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-        margin: 10px auto !important;
-        display: block;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 10px auto;
         height: 45px;
-        z-index: 10;
+        display: block;
     }
 
     nav ul {
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        margin: 0;
-        padding: 0;
     }
 
-    section {
-        padding: 20px 10px;
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
-    .fondateur-description {
-        max-width: 100%;
-        margin-top: 10px;
-    }
-
-    .menu-button,
-    .RDV-button,
-    .Apropos-button {
+    .button, .RDV-button, .menu-button, .Apropos-button {
         width: 100%;
         font-size: 16px;
         padding: 10px 15px;
     }
 }
-
-
