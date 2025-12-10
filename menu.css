@@ -1,4 +1,4 @@
-
+/* BODY GENERALE */
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -8,18 +8,20 @@ body {
     line-height: 1.6;
 }
 
+/* TITOLI */
 h1, h2, h3, h4 {
     margin: 10px 0;
 }
 
+/* PARAGRAFI */
 p {
     max-width: 700px;
     margin: 10px auto;
 }
 
+/* HEADER */
 header {
     background-color: #006937;
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,23 +30,27 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 70px;
+    flex-wrap: wrap; /* evita overflow della nav */
 }
 
+/* LOGO */
 .logo-header {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     height: 55px;
     object-fit: contain;
+    margin-right: 20px;
+    flex-shrink: 0; /* mantiene dimensioni */
 }
 
+/* NAV */
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* permette ai link di andare a capo */
+    justify-content: center;
 }
 
 nav ul li a {
@@ -61,6 +67,7 @@ nav ul li a:focus {
     text-decoration: underline;
 }
 
+/* BOTTONI */
 .button, .RDV-button, .menu-button, .Apropos-button {
     background-color: #006937;
     color: white;
@@ -82,6 +89,7 @@ nav ul li a:focus {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* SECTIONS */
 section {
     padding: 30px 15px;
     text-align: center;
@@ -97,6 +105,7 @@ section h4 {
     margin-top: 10px;
 }
 
+/* MENU GRID */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -129,40 +138,42 @@ section h4 {
     border-bottom: none;
 }
 
+/* FOOTER */
 footer { 
     background-color: #006937; 
     color: white; 
     text-align: center; 
     padding: 15px 0; 
     font-size: 14px;
-} 
+}
 
+/* MEDIA QUERY MOBILE */
 @media (max-width: 768px) {
+
+    /* HEADER MOBILE */
     header {
         flex-direction: column;
         align-items: center;
+        padding: 10px 15px;
     }
 
     .logo-header {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-        margin: 10px auto !important;
-        display: block;
+        margin: 0 auto 10px;
         height: 45px;
-        z-index: 10;
     }
 
     nav ul {
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        margin: 0;
-        padding: 0;
-        display: flex !important;
+        justify-content: center;
     }
 
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* SECTIONS MOBILE */
     section {
         padding: 20px 10px;
     }
@@ -173,6 +184,7 @@ footer {
         gap: 5px;
     }
 
+    /* BOTTONI MOBILE */
     .button, .RDV-button, .menu-button, .Apropos-button {
         width: 100%;
         font-size: 16px;
