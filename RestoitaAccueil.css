@@ -30,14 +30,14 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-wrap: wrap; /* evita overflow */
+    flex-wrap: nowrap; /* niente wrap su desktop */
 }
 
 /* LOGO */
 .logo-header {
     height: 55px;
     object-fit: contain;
-    flex-shrink: 0; /* mantiene dimensioni */
+    flex-shrink: 0;
     margin-right: 20px;
 }
 
@@ -48,8 +48,8 @@ nav ul {
     gap: 30px;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* permette ai link di andare a capo */
-    justify-content: flex-end;
+    flex-wrap: nowrap; /* tutti i link su una riga */
+    align-items: center;
 }
 
 nav ul li a {
